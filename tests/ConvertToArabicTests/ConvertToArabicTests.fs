@@ -17,3 +17,6 @@ let ``toArabic III returns 3`` () =
     Assert.Equal(toArabic("III"),3)
 
 
+[<Fact>]
+let ``toArabic IV returns 4`` () = 
+    Assert.Equal(toArabic("IV"),4)

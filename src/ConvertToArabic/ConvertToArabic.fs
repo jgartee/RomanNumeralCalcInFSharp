@@ -5,6 +5,7 @@ module ToArabic =
 
     let conversions = [ { Roman = "III" ; Arabic = 3 } ; 
                         { Roman = "II"  ; Arabic = 2 } ; 
+                        { Roman = "IV"   ; Arabic = 4 } ;
                         { Roman = "I"   ; Arabic = 1 } ;
                       ]
 
