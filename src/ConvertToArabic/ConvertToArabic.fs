@@ -1,8 +1,26 @@
 namespace ConvertToArabic
 
 module ToArabic =
-    let toArabic(numeral) =
-       if numeral = "I" then 1 
-       elif numeral = "II" then 2
-       else 3
+    type RomanArabic = { Roman : string ; Arabic : int }
 
+    let conversions = [ { Roman = "III" ; Arabic = 3 } ; 
+                        { Roman = "II"  ; Arabic = 2 } ; 
+                        { Roman = "I"   ; Arabic = 1 } ;
+                      ]
+
+    let result = [int32]
+    
+    let toArabic ( numeral : string ) : int =
+
+        let rNumeral = numeral
+
+        let rec convert (rNumeral : string, l : RomanArabic list ) : int list = 
+            match l with 
+                | []     -> [] 
+                | x :: xs -> if numeral.StartsWith ( x.Roman.Substring(0, x.Roman.Length) ) then 
+                                [x.Arabic] 
+                             else
+                                 [] @ convert (rNumeral, xs)
+
+                              
+        List.sum( convert ( numeral, conversions ))
