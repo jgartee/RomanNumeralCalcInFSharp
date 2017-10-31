@@ -20,3 +20,7 @@ let ``toArabic III returns 3`` () =
 [<Fact>]
 let ``toArabic IV returns 4`` () = 
     Assert.Equal(toArabic("IV"),4)
+
+[<Fact>]
+let ``toArabic with V returns 5`` () =
+    Assert.Equal(toArabic("V"), 5)

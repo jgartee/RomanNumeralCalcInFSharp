@@ -2,7 +2,9 @@ module Tests
 
 open System
 open Xunit
+open ConvertToArabic.ToArabic
+
 
 [<Fact>]
-let ``ConvertToArabic I returns 1`` () =
-    Assert.True(true)
+let ``toArabic V returns 5`` () =
+    Assert.Equal(toArabic("V"), 5)
